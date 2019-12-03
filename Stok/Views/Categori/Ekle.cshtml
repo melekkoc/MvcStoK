@@ -1,0 +1,22 @@
+﻿@model Stok.Models.Entity.tbl_Kategori
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    @*<div>
+            <label>Kategori Adı</label>
+            <input type="text" class="form-control" name="kategoriAd"/>
+        </div>*@
+    <div>
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(m => m.kategoriAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m=>m.kategoriAd,"",new {@style ="color:red"})
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn-info">EKLE</button>
+    </div>
+</form>
+

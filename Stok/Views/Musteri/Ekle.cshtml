@@ -1,0 +1,28 @@
+﻿@model Stok.Models.Entity.Tbl_Musteriler
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Müşteri Adı</label>
+        @Html.TextBoxFor(m => m.MusteriAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MusteriAd, "", new { @style = "color:red" })
+
+    </div>
+    <div>
+        <label>Müşteri Soyadı</label>
+        <input type="text" class="form-control" name="MusteriSoyad" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn-info" id="Btn">EKLE</button>
+    </div>
+    <script>
+        $('#Btn').click(function () {
+            alert('Kullanıcı başarı ile kaydedildi.')
+        })
+    </script>
+</form>
+
+

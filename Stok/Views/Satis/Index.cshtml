@@ -1,0 +1,29 @@
+﻿@model Stok.Models.Entity.tbl_Satis
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#Modal1"> SATIŞ YAP</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2 class="modal-title">SATIŞ EKRANI</h2>
+            <form method="post" action="/Satis/YeniSatis">
+                <div class="modal-body">
+                    <label>Ürün Adı</label>
+                    @Html.TextBoxFor(m => m.urun, new { @class = "form-control" })
+                    <label>Müşteri Adı Soyadı</label>
+                    @Html.TextBoxFor(m => m.musteri, new { @class = "form-control" })
+                    <label>Adet</label>
+                    @Html.TextBoxFor(m => m.adet, new { @class = "form-control" })
+                    <label>Fiyat</label>
+                    @Html.TextBoxFor(m => m.fiyat, new { @class = "form-control" })
+                    <br />
+                    <button type="submit" class="btn btn-info">KAYDET</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+﻿@model Stok.Models.Entity.Tbl_Musteriler
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+{
+<div class="form-group">
+
+    @Html.LabelFor(m => m.MusterId)
+    @Html.TextBoxFor(m => m.MusterId, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.MusteriAd)
+    @Html.TextBoxFor(m => m.MusteriAd, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.MusteriSoyad)
+    @Html.TextBoxFor(m => m.MusteriSoyad, new { @class = "form-control" })
+
+</div>
+    <div class="form-group">
+
+        <button class="btn btn-warning">GÜNCELLE</button>
+    </div>
+}
+
